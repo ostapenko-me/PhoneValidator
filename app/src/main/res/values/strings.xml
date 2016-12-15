@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">PhoneValidator</string>
+    <string name="title_activity_settings">Settings</string>
+    <string name="chooseString">Choose country</string>
+    <string name="saveButtonCapture">Save</string>
+    <string name="action_settings">Open Settings</string>
+    <string name="check_phone_number">Check phone number!</string>
+    <string name="type_new_number">Type new number</string>
+    <string name="checkButtonCapture">Check</string>
+</resources>

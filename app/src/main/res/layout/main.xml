@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context="ru.kopte3.phonevalidator.Main">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:text="@string/check_phone_number"
+        android:textAppearance="@android:style/TextAppearance.DeviceDefault.Medium"/>
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:inputType="text"
+        android:text="@string/type_new_number"
+        android:ems="10"
+        android:layout_marginTop="61dp"
+        android:id="@+id/input"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true"
+        style="@android:style/Widget.DeviceDefault.EditText"
+        android:textAppearance="@android:style/TextAppearance.DeviceDefault" />
+
+    <Button
+        android:id="@+id/saveButton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/checkButtonCapture"
+        android:textAppearance="@android:style/TextAppearance.DeviceDefault.Medium"
+        android:onClick="onClickCheck"
+        android:layout_below="@+id/input"
+        android:layout_alignParentStart="true" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/saveButton"
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="22dp"
+        android:id="@+id/resultTextView"
+        android:layout_alignParentEnd="true"
+        android:fontFamily="monospace"
+        android:textAppearance="@android:style/TextAppearance.DeviceDefault.Medium" />
+
+</RelativeLayout>
