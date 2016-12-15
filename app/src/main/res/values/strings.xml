@@ -7,4 +7,6 @@
     <string name="check_phone_number">Check phone number!</string>
     <string name="type_new_number">Type new number</string>
     <string name="checkButtonCapture">Check</string>
+    <string name="not_a_valid">Number is not valid!!</string>
+    <string name="number_is_valid">Number is valid!!\nLocation: %s\nInternational Number: %s\nLocal Number: %s</string>
 </resources>

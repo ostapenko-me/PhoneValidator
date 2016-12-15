@@ -24,15 +24,20 @@ public class Main extends Activity {
 
     private static final String LOG_TAG = "MainActivity";
 
-    EditText mPhoneNumberEditText;
-    Button mCheckButton;
-    TextView mResultTextView;
-    BroadcastReceiver broadcastReceiver;
+    private Gson gson;
+
+    private EditText mPhoneNumberEditText;
+    private Button mCheckButton;
+    private TextView mResultTextView;
+    private BroadcastReceiver broadcastReceiver;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.main);
+
+        gson = new Gson();
+
 
         mPhoneNumberEditText = (EditText) findViewById(R.id.input);
         mCheckButton = (Button) findViewById(R.id.saveButton);
@@ -56,13 +61,12 @@ public class Main extends Activity {
 
     private void showValidationResult(String responseBody) {
         Log.d(LOG_TAG, String.format("onReceive: responseBody = %s", responseBody));
-        Gson gson = new Gson();
         ResponseClass response = gson.fromJson(responseBody, ResponseClass.class);
 
         if (response.valid) {
-            mResultTextView.setText(String.format("Number is valid!!\nLocation: %s\nInternational Number: %s\nLocal Number: %s", response.location, response.internationalNumber, response.localNumber));
+            mResultTextView.setText(String.format(getString(R.string.number_is_valid), response.location, response.internationalNumber, response.localNumber));
         } else {
-            mResultTextView.setText("Number is not valid!!");
+            mResultTextView.setText(R.string.not_a_valid);
 
         }
     }
